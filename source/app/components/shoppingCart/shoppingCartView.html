@@ -46,7 +46,7 @@
             </div>
             <div class="quantity left">
                 <div class="label left" ng-bind="main.lang.txtQty + ': ' "></div>
-                <input type="number" min="1" pattern="^[0-9]*" title='Only Number' ng-model="product.p_quantity" onkeypress="return event.charCode >= 48" ng-change="scc.updateCart()"></input>
+                <input type="number" min="1" pattern="^[0-9]*" title='Only Number' ng-model="product.p_quantity" onkeypress="return event.charCode >= 48" ng-change="scc.updateCart(oldValue, product.p_quantity)" ng-focus="oldValue=product.p_quantity"></input>
             </div>
             <div class="price ">
                 <div class="originalPrice " ng-if="product.p_originalprice>product.p_price">

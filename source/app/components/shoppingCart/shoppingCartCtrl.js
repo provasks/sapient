@@ -101,7 +101,8 @@
             gtm.push('ProductViewed', data);
         }
 
-        function updateCart() {
+        function updateCart(oldValue, currentValue) {
+            console.log("Old Value: ", oldValue, "Current Value: " + currentValue);
             getSubtotal();
         }
 
