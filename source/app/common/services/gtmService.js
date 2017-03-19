@@ -1,20 +1,20 @@
 (function() {
     'use strict';
 
-    function gtmService($timeout) {
+    function gtmService() {
         var gtm = this;
 
-        gtm.push = function(event, data) {
-            $setTimeout(function() {
+        function push(event, data) {
+            setTimeout(function() {
                 dataLayer.push({
-                    'event': event,
-                    'product': data
+                    event: event,
+                    product: data
                 });
             }, 100);
-        };
+        }
 
-        //gtm.push = push
+        gtm.push = push;
     }
     angular.module(ngApp).service('gtmService', gtmService);
-    gtmService.$inject = ['$timeout'];
+    gtmService.$inject = [];
 })();

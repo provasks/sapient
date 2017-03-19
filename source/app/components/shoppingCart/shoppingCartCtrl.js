@@ -116,7 +116,9 @@
 
         function addToCart(product) {
             var data = {
-                'name': product.p_name,
+                name: product.p_name,
+                quantity: product.p_quantity,
+                price: product.p_quantity * product.p_price
             };
             gtm.push('AddToCart', data);
         }
